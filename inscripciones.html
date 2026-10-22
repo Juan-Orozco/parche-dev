@@ -30,7 +30,53 @@
     
 
     <main id="contenido">
-        
+        <p>La entrada es gratuita y los cupos son limitados. Completa el formulario para reservar el tuyo.<br/>
+            Los campos marcados con * son obligatorios.
+        </p>
+            <form action="/enviar-datos" method="post">
+        <fieldset>
+           
+             <legend>Tus datos</legend>
+            <label for="nombre">*Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+            <br><br>
+
+            <label for="email">*Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            <br><br>
+            <!-- Campo para Correo Electrónico -->
+            <label for="Celular">Celular:</label>
+            <input 
+                type="tel" 
+                id="celular" 
+                name="celular" 
+                pattern="3[0-9]{9}" 
+                title="El número debe tener 10 dígitos y empezar por 3." 
+                required
+            >
+
+            <br/>
+            <br/>
+            <label for="Ciudades">Elige tu ciudad:</label>
+            <select name="Ciudades" id="pais">
+                <option value="Medellín">Medellín</option>
+                <option value="Bello">Bello</option> <br/>
+                <option value="Itagüí">Itagüí</option>
+                <option value="Envigado">Envigado</option>
+                <option value="Sabaneta">Sabaneta</option> <br/>
+                <option value="La_Estrella">La Estrella</option>
+                <option value="Caldas">Caldas</option> <br/>
+                <option value="Copacabana">Copacabana</option>
+                <option value="Girardota">Girardota</option> <br/>
+                <option value="Barbosa">Barbosa</option>
+                <option value="Otra">Otra</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            
+
+        </fieldset>
     </main>
 
     <footer>
