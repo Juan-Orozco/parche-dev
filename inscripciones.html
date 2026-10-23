@@ -33,52 +33,140 @@
         <p>La entrada es gratuita y los cupos son limitados. Completa el formulario para reservar el tuyo.<br/>
             Los campos marcados con * son obligatorios.
         </p>
-            <form action="/enviar-datos" method="post">
-        <fieldset>
-           
-             <legend>Tus datos</legend>
-            <label for="nombre">*Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
-
-            <br><br>
-
-            <label for="email">*Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-            <br><br>
-            <!-- Campo para Correo Electrónico -->
-            <label for="Celular">Celular:</label>
-            <input 
-                type="tel" 
-                id="celular" 
-                name="celular" 
-                pattern="3[0-9]{9}" 
-                title="El número debe tener 10 dígitos y empezar por 3." 
-                required
-            >
-
-            <br/>
-            <br/>
-            <label for="Ciudades">Elige tu ciudad:</label>
-            <select name="Ciudades" id="pais">
-                <option value="Medellín">Medellín</option>
-                <option value="Bello">Bello</option> <br/>
-                <option value="Itagüí">Itagüí</option>
-                <option value="Envigado">Envigado</option>
-                <option value="Sabaneta">Sabaneta</option> <br/>
-                <option value="La_Estrella">La Estrella</option>
-                <option value="Caldas">Caldas</option> <br/>
-                <option value="Copacabana">Copacabana</option>
-                <option value="Girardota">Girardota</option> <br/>
-                <option value="Barbosa">Barbosa</option>
-                <option value="Otra">Otra</option>
-            </select>
-        </fieldset>
-        <fieldset>
             
+        
+        <form action="gracias.html" method="get">
 
-        </fieldset>
+            <fieldset>
+                <legend>Tus datos</legend>
+
+                <label for="nombre">*Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+                <br><br>
+
+                <label for="email">*Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+                <br><br>
+
+                <label for="celular">*Celular:</label>
+                <input type="tel" id="celular" name="celular" placeholder="3001234567" pattern="3[0-9]{9}" title="El número debe tener 10 dígitos y empezar por 3." required >
+
+                <br><br>
+
+                <label for="ciudad">*Elige tu ciudad:</label>
+                <select id="ciudad" name="ciudad" required>
+                    <option value="">Selecciona tu ciudad</option>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Bello">Bello</option>
+                    <option value="Itagüí">Itagüí</option>
+                    <option value="Envigado">Envigado</option>
+                    <option value="Sabaneta">Sabaneta</option>
+                    <option value="La Estrella">La Estrella</option>
+                    <option value="Caldas">Caldas</option>
+                    <option value="Copacabana">Copacabana</option>
+                    <option value="Girardota">Girardota</option>
+                    <option value="Barbosa">Barbosa</option>
+                    <option value="Otra">Otra</option>
+                </select>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>¿En qué momento estás?</legend>
+
+                <input type="radio" id="empezando" name="nivel" value="Empezando" required >
+                <label for="empezando">Estoy empezando a programar</label>
+                <br>  
+                <input type="radio" id="ya_programo" name="nivel" value="Ya programo" >
+                <label for="ya_programo"> Ya programo, pero no trabajo en tecnología</label>
+                <br>
+                <input type="radio" id="trabajo" name="nivel" value="Trabajo en tecnologia">
+                <label for="trabajo">Trabajo en tecnología</label>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>¿Qué temas te interesan?</legend>
+
+                <input type="checkbox" id="desarrollo_web" name="intereses" value="Desarrollo web">
+                <label for="desarrollo_web">Desarrollo web</label>
+
+                <br>
+
+                <input type="checkbox" id="datos_sql" name="intereses"value="Datos y SQL">
+                <label for="datos_sql">Datos y SQL</label>
+
+                <br>
+
+                <input type="checkbox" id="accesibilidad" name="intereses" value="Accesibilidad">
+                <label for="accesibilidad">Accesibilidad</label>
+
+                <br>
+
+                <input type="checkbox" id="python" name="intereses" value="Python" >
+                <label for="python">Python</label>
+
+                <br>
+
+                <input type="checkbox" id="nube" name="intereses" value="Despliegue en la nube" >
+                <label for="nube">Despliegue en la nube</label>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Agenda</legend>
+
+                <p>
+                    Quiero inscribirme al taller
+                    “Tu primer bot con Python”
+                    (30 cupos, trae tu computador).
+                </p>
+
+                <label for="talla">*Talla de camiseta:</label>
+
+                <select id="talla" name="talla" required>
+                    <option value="">Selecciona tu talla</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+
+                <br><br>
+
+                <label for="que_esperas">
+                    ¿Qué esperas aprender en Parche Dev?
+                    (máximo 300 caracteres)
+                </label>
+                <input type="text" id="nombre" name="nombre" placeholder=". . ." maxlength="300">
+
+                
+                <br><br>
+
+                <input type="checkbox" id="acepto_conducta" name="acepta_conducta" value="Si" required>
+
+                <label for="acepto_conducta"> Acepto el <a href="conducta.html">código de conducta del evento</a>. </label>
+
+                <br><br>
+
+                <button type="submit">Inscribirme</button>
+
+            </fieldset>
+
+        </form>
     </main>
 
+    <br/>
     <footer>
         <p>
             ©  ¿Preguntas? Escríbenos a <a href="mailt:hola@parchedev.example">hola@parchedev.example</a><br/>
